@@ -44,7 +44,7 @@ footer {
   grid-template-rows: 80px auto 70px;
 }
 
-@media screen and (max-width: 758px) {
+@media screen and (min-width: 450px) and (max-width: 758px) {
   .grid {
     grid-template-areas:
       "header header header"
@@ -56,5 +56,24 @@ footer {
   aside ul {
     display: flex;
     gap: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: initial;
+  }
+  header,
+  footer {
+    padding: 1em 0;
   }
 }
