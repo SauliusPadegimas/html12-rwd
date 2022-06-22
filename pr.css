@@ -22,7 +22,7 @@ h2 {
   margin: 0;
 }
 nav {
-  grid-row: 3 / span 3;
+  grid-row: 3 / 4;
   background-color: inherit;
   display: grid;
   grid-template-columns: 1fr;
@@ -64,11 +64,18 @@ aside {
   main {
     grid-column: 2 / span 3;
   }
+  nav {
+    grid-row: span 2;
+  }
 }
 
 @media screen and (max-width: 450px) {
-  nav {
-    grid-row: 3 / 6;
-    grid-column: 1 / 5;
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+  .grid > * {
+    grid-row: span 1;
+    grid-column: span 1;
   }
 }
