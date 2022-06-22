@@ -34,7 +34,6 @@ nav {
   height: 80px;
   grid-area: nav;
   gap: 30px;
-  padding: 0 0 0 1.5rem !important;
 }
 
 .login {
@@ -67,13 +66,27 @@ footer {
 @media screen and (max-width: 764px) {
   .grid {
     grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 2fr 3fr; */
     grid-template-areas:
       "nav"
       "login"
-      "content";
-    grid-template-columns: initial;
+      "content"
+      "help";
+    /* grid-template-columns: initial; */
   }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    grid-area: nav;
+    gap: 30px;
+  }
+
   .help {
+    width: 0;
+    height: 0;
+    padding: 0;
     visibility: hidden;
   }
 }
